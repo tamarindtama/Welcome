@@ -1,0 +1,814 @@
+/*Image Mapping 
+Img1: ORIG-H 626 / COMP 64; 104; 35; 30; 25; 28; 340 / CURRENT 40vw
+Img2: ORIG-H 485 / COMP 65; 420 / CURRENT 32vw
+Img2: ORIG-H 587 / COMP 39; 37; 252; 259 / CURRENT 38vw */
+.img1r0{height:4.08956869vw; max-height:64px;}
+.img1r1{height:6.64536741vw; max-height:104px;}
+.img1r2{height:2.23642172vw; max-height:35px;}
+.img1r3{height:1.91693291vw; max-height:30px;}
+.img1r4{height:1.59744409vw; max-height:25px;}
+.img1r5{height:1.78913738vw; max-height:28px;}
+.img1r6{height:21.72523962vw; max-height:340px;}
+
+.img2r0{height:4.28865979381vw; max-height:65px;}
+.img2r1{height:27.7113402062vw; max-height:420px;}
+
+.img3r0{height:2.52470187vw; max-height:39px;}
+.img3r1{height:2.39522998vw; max-height:37px;}
+.img3r2{height:16.31345826vw; max-height:252px;}
+.img3r3{height:16.76660988vw; max-height:259px;}
+
+.joyride-list{
+  opacity:0;
+  display:none;
+}
+
+#mapping{
+  margin:0; 
+  padding:0;
+  border:.6vw solid #227700; 
+  border-radius:.4vw;
+  width: 0;
+}
+
+.downCircle{
+  border-radius: 50%;
+  margin-left: 2vw;
+  width: 5.5vw;
+  height: 5.5vw;
+  background-color: #4D4D4D;
+}
+
+.downArrow{
+  width: 0; 
+  position: absolute;
+  height: 0; 
+  margin-left: 1.1vw;
+  margin-top: 1.5vw;
+  border-left: 1.75vw solid transparent;
+  border-right: 1.75vw solid transparent;
+  border-top: 3.25vw solid #ffffff;
+  font-size: 0;
+  line-height: 0;
+}
+
+
+/*Title*/
+  .title1 {
+    position:relative;
+    top:25%;
+    text-align:center;
+    color: rgba(255, 255, 255, 1););
+    font-family: Arial;
+    font-size: 5vw;
+    font-weight:normal;
+    text-shadow:
+    -1px -1px 0 rgba(0,0,0,0.25),
+    1.5px -1.5px 0 rgba(0,0,0,0.25),
+    -1.5px 1.5px 0 rgba(0,0,0,0.25),
+    1.5px 1.5px 0 rgba(0,0,0,0.25);
+    position:relative;
+    display:block;
+
+  }
+
+
+  /*Body text class for all body text content*/
+  /*BrightTALK is where professionals, Speaking at brighttalk*/
+  .bodyText {
+    text-align:center;
+    font-family:Arial;
+    font-size:1.75vw;
+    font-weight:lighter;
+    text-shadow:
+      -1px -1px 0 rgba(75,75,75,0.8),
+      1px -1px 0 rgba(75,75,75,0.8),
+      -1px 1px 0 rgba(75,75,75,0.8),
+      1px 1px 0 rgba(75,75,75,0.8);
+    color:rgb(255,255,255);
+  }
+
+  /*BrightTALK is a source of valuable information text*/
+  /*Removes font shadow inherited from .header1 class*/
+  font#infoHeader {
+    text-shadow:none;
+    color:#227700;
+  }
+
+  /*Class for header text in all informational sections*/
+  .header1 {
+    text-align:center;
+    color: rgba(255,255,255,1); 
+    font-family: Arial;
+    font-size:2.75vw;
+    font-weight:lighter;
+    text-shadow:
+      -1px -1px 0 rgba(75,75,75,0.8),
+      1px -1px 0 rgba(75,75,75,0.8),
+      -1px 1px 0 rgba(75,75,75,0.8),
+      1px 1px 0 rgba(75,75,75,0.8);
+    top:50em;
+    text-shadow:none;
+    color:#227700;
+    font-weight: normal;
+  }
+
+  .picCap {
+    color:#227700;
+    font-family:Arial;
+    font-size:25vw;
+  }
+
+  /*Container for objects within the transparency*/
+  /*Keeps content at proper width and height*/
+  .contain {
+    margin:auto;
+    width:75%;
+  }
+
+  /*Body Text for What is BrightTALK*/
+  font#peers {
+        font-size:3vw; 
+  }
+
+  /*Main Blue Call to Action Button*/
+  a#mainButton {
+    border: 2px solid #66cc00;
+    background: #22700;
+    background: -webkit-gradient(linear, left top, left bottom, from(#66cc00), to(#227700));
+    background: -webkit-linear-gradient(top, #66cc00, #227700);
+    background: -moz-linear-gradient(top, #227700, #66cc00);
+    background: -ms-linear-gradient(top, #227700, #66cc00);
+    background: -o-linear-gradient(top, #227700, #66cc00);
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: white;
+    text-decoration: none;
+    vertical-align: middle;
+    margin:auto;
+    display:block;
+    position:relative;
+    letter-spacing:.1vw;
+    top:25%;
+    z-index:99;
+    width:25vw;
+    height:1vw;
+    text-align:center;
+    color:#ffffff;
+    padding-bottom:2.75vw;
+    font-size:2vw;
+  } 
+
+  /*Main Call to action hover activity*/
+  a#mainButton:hover {
+    text-decoration:none;
+  }
+
+  /*Main Call to action active activity*/
+  a#mainButton:active {
+    background: #227700;
+  }
+
+    /*Main Button 2*/
+  a#mainButton2 {
+    border: 2px solid #66cc00;
+    background: #22700;
+    background: -webkit-gradient(linear, left top, left bottom, from(#66cc00), to(#227700));
+    background: -webkit-linear-gradient(top, #66cc00, #227700);
+    background: -moz-linear-gradient(top, #227700, #66cc00);
+    background: -ms-linear-gradient(top, #227700, #66cc00);
+    background: -o-linear-gradient(top, #227700, #66cc00);
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: white;
+    text-decoration: none;
+    vertical-align: middle;
+    margin:auto;
+    display:block;
+    position:relative;
+    top:25%;
+    z-index:99;
+    width:25vw;
+    height:1vw;
+    letter-spacing:.1vw;
+    text-align:center;
+    color:#ffffff;
+    padding-bottom:4vw;
+    font-size:3vw;
+  } 
+
+  /*Main Call to action hover activity*/
+  a#mainButton2:hover {
+    text-decoration:none;
+  }
+
+  /*Main Call to action active activity*/
+  a#mainButton2:active {
+    background: #227700;
+  }
+
+  /*Text Header for Video in coloredBodyDiv*/
+  font#videoHeader {
+    text-align:center;
+    color: #4d4d4d;
+    font-family: Arial;
+    font-weight:normal;
+    text-shadow:none;
+    font-size:3vw;
+  }
+
+  font#videoHeader2 {
+    text-align:center;
+    font-family: Arial;
+    font-weight:normal;
+    text-shadow:none;
+    font-size:3vw;
+  }
+
+  /* Main Content Area - Controls height of page */
+  div#mktContent {
+    position: relative;
+    width: 100%; 
+  }
+
+  /*Main Body Div, containing video player*/
+  div#coloredBodyDiv {
+    background: #f0f0f0;
+    margin:auto;
+    width:100%;
+  }
+  /*2nd Main Body Div, the Green Section*/
+  div#coloredBodyDiv2 {
+    background: #ffffff;
+    margin:auto;
+    width:100%;
+  }
+  /*3rd Main Body Div, containing the form*/
+  div#coloredBodyDiv3 {
+    background:#ffffff;
+    margin:auto;
+    width:100%;
+  }
+  
+  font#testimonialText {
+    font-size:2vw;
+  }
+  
+  /*First image background, Val Laughing image*/
+  div#layer {
+    background-image:url(https://www.brighttalk.com/content/1411060241_bg2.jpg );
+    position:fixed;
+    background-size:cover;
+    background-position:left top;
+    display:block;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-52;
+  }
+  
+  /*Black Color Filter over background*/
+  div#layer3 {
+    position:fixed;
+    display:block;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-50;
+    background-color:rgba(0,0,0,0.20);
+  }  
+
+  /*Seperator between hook and body text*/
+  div#beyonce {
+    margin:auto;
+    height:50px;
+    width:100%;
+  }
+
+  div#mktHeader {position:relative;  height: 50px; }
+
+  div#mktFooter {position: relative; height: 50px;} 
+ 
+  /* Start fancy button */
+  div.buttonSubmit {
+    position:relative;
+    float:left;
+  }
+
+
+  .topBarButton {
+    display:block;
+    background-color:#d7d7d7;
+    width:100%;
+    font-size:1.5vw;
+    text-decoration:none;
+    color:#818181;
+    line-height:5vw;
+  }
+
+  .topBarButton:hover {
+    text-decoration:none;
+    background-color:#66CC00;
+    color:#ffffff;
+  }
+
+  #proposal {
+    background-color:#227700;
+    color:#ffffff;
+  }
+
+  #proposal:hover {
+    background-color:#66cc00;
+  }
+
+  /*Class for the Bar Button*/
+  .back-to-top {
+    position:fixed;
+    top:-10px;
+    right:-10px;
+   background: #b8b8b8;
+   background: -webkit-gradient(linear, left top, left bottom, from(#ff), to(#d7d7d7));
+   background: -webkit-linear-gradient(top, #ffffff, #d7d7d7);
+   background: -moz-linear-gradient(top, #ffffff, #d7d7d7);
+   background: -ms-linear-gradient(top, #ffffff, #d7d7d7);
+   background: -o-linear-gradient(top, #ffffff, #d7d7d7);
+   padding: 0.75em;
+   -webkit-border-radius: 0px;
+   -moz-border-radius: 0px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 2px 2px 10px 0;
+   text-shadow: rgba(0,0,0,.2) 0 1px 0;
+   color: #227700;
+   font-size: 1.75vw;
+    font-family:Arial;
+    display:none;
+    z-index:101;
+    text-decoration:none;
+    border-bottom-left-radius:50px;
+    border-left: 5px solid #227700;
+    border-bottom: 5px solid #227700;
+  } 
+
+  /*Bar Button hover activity*/
+  a#barButton:hover {
+    background:#f0f0f0;
+    text-decoration:none;
+  }
+
+  /*Height of the top clear sectioncontaining connect with your audience and main CTA*/
+  div#topHeaderSection {
+    height:45vw;
+  }
+
+  /*Top Green floating Bar*/
+  div#test2 {
+    background-color:#66CC00; 
+    display:block;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:24px;
+    font-weight:lighter;
+    font-style:normal;
+    height:4vw;
+    width:100%;
+    text-decoration:none;
+    text-align:center;
+    text-shadow:1px 1px 0px #141414;
+    position:fixed;
+    top:0;
+    color:000000;
+    z-index:100;
+  }
+
+
+
+  div.buttonSubmit input, div.buttonSubmit span {
+    background-image:url(https://www.marketo.com/buttons/button-submit10.gif);
+    /* change button and path to correct customer partition */
+    background-position:right 0px;
+    background-repeat:no-repeat;
+    border:0px none;
+    color:#FFFFFF;
+    cursor:pointer;
+    float:left;
+    height:36px;
+    margin:0px;
+    padding:0px 15px 2px;
+    position:relative;
+    z-index:5;
+  }
+
+  div.buttonSubmit span {
+    background-position:left -36px;
+    left:0px;
+    padding:0px;
+    position:absolute;
+    top:0px;
+    width:4px;
+    z-index:10;
+  }
+
+  div.buttonSubmit input {
+    width:auto;
+    padding-left: 10px !important;
+    padding-right: 10px !important; 
+  }
+
+  #mktFrmSubmit{
+    color: #FFFFFF !important;
+  }
+ 
+  div.buttonSubmit:hover input {  background-position: right -72px;}
+  div.buttonSubmit:hover span {  background-position: left -108px;}
+ 
+  #mktFrmReset {
+    display:none;
+  }
+
+
+
+
+
+
+
+/* Width of Full Page */
+div#innerWrapDiv {
+  width: 100%;
+  background-image:url(https://www.brighttalk.com/content/1411060241_bg2.jpg);
+  background-size:cover;
+  background-attachment:fixed;
+  background-position:center center;
+  }
+
+
+
+/* Main Content Area - Controls height of page */
+div#mktContent {
+  position: relative;
+  width: 100%;
+}
+
+div.blog-content {
+                font-size: 13px;
+                line-height: 1.5em;
+                padding: 15px 75px 0 0;
+                position: relative;
+            }
+
+            .presenterWrapper.grey-box {
+                border-top:none;
+            }
+              
+            div.blog-content img {
+              display: block;
+              margin: 10px auto;
+            }
+
+            div.presenterWrapper {
+                position: relative;
+            }
+            
+            div.content-attribution {
+                padding: 15px;
+                margin: 15px 0;
+                font-size: 12px;
+                position: relative;
+                width: 267px;
+            }
+
+            .grey-box {
+                background-color: #f0f0f0;
+                border: solid #d7d7d7 1px;
+            }
+              
+             .community-identifier {
+                border-top: solid #d7d7d7 1px;
+                padding: 10px 0;
+                margin-top: 20px;
+                line-height: 1.5em;
+                font-style: italic;
+             }
+
+            div.content-attribution p.blog-source {
+                font-weight: bold;
+                font-size: 15px;
+    
+            }
+
+            h2.more-blogs {
+                font-size:16px;
+                font-weight: normal;
+                position: relative;
+            }
+
+            div.addl-featured-articles {
+                margin:12px 0 32px 0;
+                display: block;
+                position: relative;
+
+            }
+
+            div.addl-featured-articles ul {
+                list-style-type: disc;
+            }
+
+            div.addl-featured-articles ul li {
+                padding-bottom: 5px;
+                margin-left: 14px;
+            }
+
+            .player .right .channelTitleWrapper {
+                float: none;
+            }
+
+            div.article-author {
+                height: auto;
+                padding: 10px;
+                padding-top:0px;
+            }
+
+            .author-details h3 {
+                margin-bottom: 0;
+                display: inline-block;
+            }
+
+            .article-author .author-company,
+            .article-author .author-connect {
+                display: block;
+            }
+
+            .article-author .author-connect {
+                margin: 3px 0;
+                font-weight: bold;
+            }
+
+            .article-author a.see-more-author {
+                font-size: 14px;
+                font-weight: bold;
+                display: inline-block;
+                margin-top: 8px;
+            }
+
+
+            .float-left {
+                float: left;
+            }
+
+            .author-details {
+                padding-left: 12px;
+                float: left;
+                width: 300px;
+            }
+
+            div.presenterWrapper span {
+                margin-top: 3px;
+            }
+
+            .article-author .social-links {
+                float: left;
+                margin-top: 11px;
+            }
+
+            .article-author .syndicated-from {
+                position:absolute;
+                bottom: 0;
+                right: 0;
+                padding: 3px;
+                background-color: #d7d7d7;
+                color: #fff;
+                font-weight:bold;
+            }
+
+            #contributor {
+                margin-top: 30px;
+                border-top: solid 1px #e7e7e7;
+                padding-top: 7px;
+            }
+
+            span.syndication-interest {
+                display: block;
+                color: #4d4d4d;
+                margin-top: 6px;
+                font-size: 11px;
+            }
+              
+            .more-content-left {
+                margin: 12px 28px 12px 0;
+                border-top: solid #d7d7d7 1px;
+                border-bottom: solid 1px #d7d7d7;
+                padding-top: 10px;
+            }
+                
+            .more-content-left h3 {
+                font-weight:normal;
+                font-size: 14px;
+                color: #4d4d4d;
+             }
+
+            .cf:before,
+            .cf:after {
+                content: " "; /* 1 */
+                display: table; /* 2 */
+            }
+
+            .cf:after {
+                clear: both;
+            }
+  
+  span.number {
+    display: block; 
+    font-size: 40px; 
+    padding: 20px 35px 20px 5px;
+    float: left;
+}
+.featured-list {
+    width:100%;
+    color: #4d4d4d;
+    max-width: 650px;
+    display: block;
+    height:100px;
+    margin-bottom:20px;
+    border-bottom: solid 1px #d7d7d7;
+}
+
+.featured-list img {
+    float: left;
+    margin-right: 7px;
+    border: solid 1px #d7d7d7;
+}
+
+div.featured-list h2 {
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 7px;
+}
+
+span.speakers {
+    font-size: 12px;
+    text-align: left;
+}
+  
+  a.attend {
+    display: block;
+padding-top: 5px;
+width: 449px;
+float: right;
+font-weight: bold;
+  }
+
+div.headerBottom .searchField {
+    border-color: #999;
+    border-radius: 0;
+    border-style: solid;
+    border-width: 2px 1px 0;
+    float: left;
+    height: 17px;
+    line-height: 17px;
+    padding: 3px 10px 3px 5px;
+    width: 271px;
+}
+  
+div.headerBottom button.searchButton {
+    background: #fff;
+    background: -moz-linear-gradient(top,#fff 0,#e6e7e8 100%);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#fff),color-stop(100%,#e6e7e8));
+    background: -webkit-linear-gradient(top,#fff 0,#e6e7e8 100%);
+    background: -o-linear-gradient(top,#fff 0,#e6e7e8 100%);
+    background: -ms-linear-gradient(top,#fff 0,#e6e7e8 100%);
+    background: linear-gradient(to bottom,#fff 0,#e6e7e8 100%);
+    border-color: #999;
+    border-style: solid;
+    border-width: 2px 1px 0 0;
+    color: #270;
+    cursor: pointer;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#e6e7e8',GradientType=0);
+    font-size: 13px;
+    font-weight: bold;
+    height: 25px;
+    line-height: 23px;
+    padding: 0 5px;
+    text-shadow: 1px 1px #fff;
+ }
+  
+  div.headerBottom form.searchForm {
+    float: left;
+  }
+  
+  h3, h2 {
+    font-weight: normal;
+}
+
+input[type="checkbox"] {
+    margin-right:6px;
+}
+
+ul .check-list {
+    list-style-type: none;
+}
+
+ul.check-list li {
+    margin: 6px 0;
+}
+  
+  aside#right {
+    text-align: center;
+  }
+  
+  div#left p, div#left ul {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  
+  input.submit-proposal {
+    margin-top: 25px;
+    background-color: #f47d27;
+    padding: 15px 40px;
+    color: #fff;
+    font-size: 24px;
+    border: none;
+  }
+  
+  div.contact-details {
+    width:530px; 
+  }
+  
+  div#left div.contact-details input[type="text"], div#left div.contact-details input[type="email"] {
+    width:190px; 
+  }
+  
+  div#left input[type="text"], div#left input[type="email"] {
+    border: solid 1px #4d4d4d;
+    box-shadow: inset 2px 2px 2px #d7d7d7;
+    padding: 3px;
+    width: 290px;
+    margin-bottom: 10px;
+  }
+  
+  div.contact-details input:nth-child(odd) {
+    margin-right:15px;
+  }
+  
+  span.label {
+    position: relative;
+    bottom: 8px;
+  }
+  
+  ul.speaker-list {
+    width: 280px;
+    margin: 0 auto;
+  }
+  
+  ul.speaker-list li {
+float: left;
+width: 120px;
+margin-bottom: 25px;
+padding: 0 10px;
+    height:130px;
+}
+  
+  ul.speaker-list li img {
+display: block;
+width: 70px;
+margin: 0 auto 6px;
+}
+  
+  ul.speaker-list li span.speaker-name {
+font-weight: bold;
+    display:block;
+}
+
+
+/*SIMBOL EDITS*/
+.headerWrapper {
+    z-index: 100;
+    background-color:#ffffff;
+    width:100%;
+}
+
+#bodyId {
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+div#outerWrapDiv {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+/*TAMARIND EDITS*/ 

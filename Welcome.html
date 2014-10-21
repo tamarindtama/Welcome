@@ -1,0 +1,617 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/2000/REC-xhtml1-200000126/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+
+        <!--[if IE 7]>
+            <link rel="stylesheet" href="https://www.brighttalk.com/themes/bt2010/css/styleguide/font-awesome-ie7.css">
+        <![endif]-->
+        <!--[if lt IE 9]>
+            <script href="https://www.brighttalk.com/themes/bt2010/js/third-party/html5shiv.js"></script>
+        <![endif]-->
+
+<!-- SYSTEM CSS - DO NOT EDIT -->
+<link rel="stylesheet" type="text/css" media="screen" href="/css/mktLPSupport.css" />
+<link type='text/css' rel='stylesheet' href="Footer.css">
+<link type='text/css' rel='stylesheet' href="Stylesheet.css">
+
+<!-- Joyride Things -->
+    <link type="text/css" rel="stylesheet" href="joyride-2.1.css">
+    <link type="text/css" rel="stylesheet" href="mobile.css">
+
+<!-- Jquery for fancy things!-->
+<script language="JavaScript" src="https://app.marketo.com/js/public/jquery-latest.min.js" type="text/javascript"></script>
+
+<script>
+  // to make fancy buttons.  Uses noConflict just in case
+  var $jQ = jQuery.noConflict();
+ 
+  //Joyride Mapping
+  window.onload = function () {
+    var ImageMap = function (map) {
+            var n,
+                areas = map.getElementsByTagName('area'),
+                len = areas.length,
+                coords = [],
+                previousWidth = 964;
+            for (n = 0; n < len; n++) {
+                coords[n] = areas[n].coords.split(',');
+            }
+            this.resize = function () {
+                var n, m, clen,
+                    x = document.body.clientWidth / previousWidth;
+                for (n = 0; n < len; n++) {
+                    clen = coords[n].length;
+                    for (m = 0; m < clen; m++) {
+                        coords[n][m] *= x;
+                    }
+                    areas[n].coords = coords[n].join(',');
+                }
+                previousWidth = document.body.clientWidth;
+                return true;
+            };
+            window.onresize = this.resize;
+        },
+        imageMap = new ImageMap(document.getElementById('map_ID'));
+    imageMap.resize();
+    return;
+};
+
+
+  // Use jQuery via $j(...)
+ jQuery(document).ready(function() {
+   var offset = 400;
+   var offset2 = jQuery(window).height();
+   var duration = 250;
+   jQuery(window).scroll(function() {
+     var scrollPos = jQuery(this).scrollTop();
+     var mainButtonOffset = jQuery('#mainButton').offset().top;
+     if (scrollPos > mainButtonOffset) {
+       jQuery('#proposal').fadeIn(duration);
+       jQuery('#spaces').fadeIn(duration);
+     }
+     else {
+      jQuery('#spaces').fadeOut(duration);
+      jQuery('#proposal').fadeOut(duration);
+    }
+   });
+
+    var height2 = 400;
+    var height = jQuery('#coloredBodyDiv3').offset().top-57;
+    var duration2 = 1000;                   
+   jQuery('.back-to-top').click(function(event) {
+     event.preventDefault();
+    jQuery('html,body').animate({scrollTop:jQuery('#coloredBodyDiv3').offset().top-50}, duration2);
+     return false;
+   })
+
+   jQuery('#overview1').click(function(event) {
+    event.preventDefault();
+    jQuery('html,body').animate({scrollTop:jQuery('#coloredBodyDiv').offset().top-50}, duration2);
+    return false;
+   })
+   jQuery('#summits').click(function(event) {
+    event.preventDefault();
+    jQuery('html,body').animate({scrollTop:jQuery('#coloredBodyDiv2').offset().top-50}, duration2);
+    return false;
+   })
+   jQuery('#audience').click(function(event) {
+    event.preventDefault();
+    jQuery('html,body').animate({scrollTop:jQuery('#coloredBodyDiv2').offset().top-50}, duration2);
+    return false;
+   })
+   jQuery('#proposal').click(function(event) {
+    event.preventDefault();
+    jQuery('html,body').animate({scrollTop:jQuery('#coloredBodyDiv3').offset().top-50}, duration2);
+    return false;
+   })
+
+});
+    
+</script>
+ 
+<!-- SYSTEM INCLUDES - DO NOT EDIT -->
+<?php echo $mContext['headElements']; ?>
+</head>
+<body id="bodyId" class="mktEditable" align="center" <?php echo $mContext['bodyAttributes'] ?>
+<div id="outerWrapDiv" class="mktEditable">
+<div class="headerWrapper">
+
+    <div class="header">
+        <div class="headerTop">
+          <table style="height:3vw; table-layout:fixed;width:100%">
+            <tbody>
+              <tr>
+                <td style="background-color:#ffffff; width:17%">
+            <a href="https://www.brighttalk.com/" class="logo">
+                <img class="logoImage" src="https://www.brighttalk.com/bundles/brighttalklayout/images/logo-transparent-139x25.png"  style="height:2vw; max-height:25px" alt="BrightTALK">
+            </a>
+                </td>
+                <td style="width:17%;"><a href="#" class="topBarButton" id="overview1">Knowledge Feed</a></td>
+                <td style="width:17%;"><a href="#" class="topBarButton" id="summits">Create Content</a></td>
+                <td style="width:17%;"><a href="#" class="topBarButton" id="audience">Editorial</a></td>
+                <td style="width:17%;"><a href="#" class="topBarButton" id="proposal" style="display:none;">Next Up</a></td>
+                <td id="spaces" style="display:none;"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+</div>
+
+  <div id="innerWrapDiv" style="z-index:10;">
+
+<?php echo $mContext['bodyElements']; ?>
+
+
+
+
+<!-- START TEMPLATE HTML - EDIT THIS SECTION -->
+
+
+<div id="mktContent" class="mktEditable">
+<!-- Base of Landing Page Content -->
+
+
+<!--SIMBOLEDITS-->
+
+  <!--Content Seciont of the page without footer and header-->
+  <div id="mktContent" class="mktEditable">
+    <div id="topHeaderSection" style="background-color:rgba(0,0,0,0.5);">
+
+      <!-- Base of Landing Page Content -->
+      <table height="100%" align="center" style="margin:0 auto" width="75%">
+        <tbody>
+          <tr><td></td></tr>
+          <tr>
+            <td valign="middle">
+              <font class="title1">
+                New to BrightTALK?</br>
+              </font>
+              <font style="font-size:1vw">
+              </br>
+            </font>
+              <font class="title1" style="font-size:2vw; line-height:150%">BrightTALK is a platform which connects professionals to learn and share best practices via live, interactive webinars, channels and summits.</font>
+            </td>
+          </tr>
+          <tr>
+            <td style="height:2vw"></td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <!--Main Call to Action Button on the default view page-->
+              <a href="#" class="back-to-top" id="mainButton">Take the tour</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+    <!--End of topHeaderSection div-->
+    
+    <!--First Section: Knowledge Feed-->
+    <div id="coloredBodyDiv" class="section1" style="background-color:#ffffff; padding-top:3.5vw;padding-bottom:0">
+      <div class="contain">
+        <center>
+          <div class="downCircle" style="margin-top: -6.75vw; margin-bottom: 4vw;">
+            <div class="downArrow">
+            </div>
+          </div>
+        </center>
+        <center>
+          <table align="center">
+            <tbody>
+              <tr valign="middle">
+                <td align="left" colspan="4">
+                  <font class="header1">
+                    Get to know your Knowledge Feed<br/>
+                  </font>
+                </td>
+              </tr>
+              <tr><td style="height:0.1vw"></td></tr>
+              <tr>
+                <td align="left" valign="top" colspan="4">
+                  <font class="bodyText" id="videoHeader" style="font-size:1.75vw">
+                    Check your personalized Knowledge Feed daily to get the latest relevent content. 
+                  </font>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </center>
+      </div>
+      </div>
+
+      <!--Image Mapping-->
+      <div id="coloredBodyDiv" style="background-color:#ffffff; padding-top:1vw;padding-bottom:8vw">
+      <div class="contain">
+        <center>
+          <table align="center">
+            <tbody>
+              <tr valign="middle">
+                <td align="left" colspan="4" id="mapping"><center> 
+                <table style="padding:0; margin:0; position: absolute; width:0">
+                <img class="img1r0" src="img/101.jpg">
+                <img class="img1r0" src="img/102.jpg">
+                <img class="img1r0" src="img/103.jpg">
+                <img class="img1r0" id="j1Prof" src="img/104.jpg">
+                </br>             
+                <img class="img1r1" src="img/111.jpg">
+                <img class="img1r1" src="img/112.jpg">
+                <img class="img1r1" src="img/113.jpg">
+                <img class="img1r1" src="img/114.jpg">
+                </br>             
+                <img class="img1r2" src="img/121.jpg">
+                <img class="img1r2" src="img/122.jpg">
+                <img class="img1r2" id="j1Tab" src="img/123.jpg">
+                <img class="img1r2" src="img/124.jpg">
+                </br>            
+                <img class="img1r3" id="j1Hist" src="img/131.jpg">
+                <img class="img1r3" src="img/132.jpg">
+                <img class="img1r3" src="img/133.jpg">
+                <img class="img1r3" src="img/134.jpg">
+                </br>            
+                <img class="img1r4" src="img/141.jpg">
+                <img class="img1r4" src="img/142.jpg">
+                <img class="img1r4" id="j1Feed" src="img/143.jpg">
+                <img class="img1r4" src="img/144.jpg">
+                </br>            
+                <img class="img1r5" id="j1Chan" src="img/151.jpg">
+                <img class="img1r5" src="img/152.jpg">
+                <img class="img1r5" src="img/153.jpg">
+                <img class="img1r5" src="img/154.jpg">
+                </br>            
+                <img class="img1r6" src="img/161.jpg">
+                <img class="img1r6" src="img/162.jpg">
+                <img class="img1r6" src="img/163.jpg">
+                <img class="img1r6" src="img/164.jpg">
+                </table></center>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </center>
+      </div>
+    </div>
+
+    <!--Second Section: Searching-->
+    <div id="coloredBodyDiv" class="section2" style="background-color:#f0f0f0; padding-top:5vw;padding-bottom:0vw">
+      <div class="contain">
+        <center>
+          <div class="downCircle" style="margin-top: -8vw; margin-bottom: 4vw;">
+            <div class="downArrow">
+            </div>
+          </div>
+        </center>
+        <center>
+          <table  style=align="center">
+            <tbody>
+              <tr valign="middle">
+                <td align="left" colspan="4">
+                  <font class="header1">
+                    Find content to fit your professional needs<br />
+                  </font>
+                </td>
+              </tr>
+              <tr><td style="height:0.1vw"></td></tr>
+              <tr>
+                <td align="left" valign="top" colspan="4">
+                  <font class="bodyText" id="videoHeader" style="font-size:1.95vw">
+                    Get inspired by BrightTALK's 53 communities and empower your workflow.  
+                  </font>
+                </td>
+              </tr>
+            </body>
+          </table>
+        </center>
+      </div>
+    </div>
+
+      <!--Image Mapping-->
+      <div id="coloredBodyDiv" style="background-color:#f0f0f0; padding-top:1vw;padding-bottom:8vw">
+      <div class="contain">
+        <center>
+          <table align="center">
+            <tbody>
+              <tr valign="middle">
+                <td align="left" colspan="4" id="mapping"><center> 
+                <table style="padding:0; margin:0; position: absolute; width:0">
+                <img class="img2r0" id="j2Go" src="img/201.jpg">
+                <img class="img2r0" id="j2Search" src="img/202.jpg">
+                </br>             
+                <img class="img2r1" src="img/211.jpg">
+                <img class="img2r1" src="img/212.jpg">
+                </table></center>
+              </tr>
+            </tbody>
+          </table>
+        </center>
+      </div>
+    </div>
+
+    <!--Third Section: Communities-->
+    <div id="coloredBodyDiv" class="section3" style="background-color:#ffffff; padding-top:5vw;padding-bottom:0vw">
+      <div class="contain">
+          <center>
+          <div class="downCircle" style="margin-top: -8vw; margin-bottom: 4vw;">
+            <div class="downArrow">
+            </div>
+          </div>
+        </center>
+        <center>
+          <table align="center">
+            <tbody>
+              <tr valign="middle">
+                <td align="left" colspan="4">
+                  <font class="header1">
+                    Browse communities and start learning<br/>
+                  </font>
+                </td>
+              </tr>
+              <tr><td style="height:0.1vw"></td></tr>
+              <tr>
+                <td align="left" valign="top" colspan="4">
+                  <font class="bodyText" id="videoHeader" style="font-size:1.75vw">
+                    Watch webinars, subscribe to channels and attend summits on community pages.
+                  </font>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </center>
+      </div>
+    </div>
+
+      <!--Image Mapping-->
+      <div id="coloredBodyDiv" style="background-color:#ffffff; padding-top:1vw;padding-bottom:8vw">
+      <div class="contain">
+        <center>
+          <table  style="height:10vw;" align="center">
+            <tbody>
+              <tr valign="middle">
+                <td align="left" colspan="4" id="mapping"><center> 
+                <table style="padding:0; margin:0; position: absolute; width:0">
+                <img class="img3r0" src="img/301.jpg">
+                <img class="img3r0" id="j3Share" src="img/302.jpg">
+                </br>             
+                <img class="img3r1" src="img/311.jpg">
+                <img class="img3r1" src="img/312.jpg">
+                </br>             
+                <img class="img3r2" id="j3Comm" src="img/321.jpg">
+                <img class="img3r2" src="img/322.jpg">
+                </br>            
+                <img class="img3r3" id="j3Drop" src="img/331.jpg">
+                <img class="img3r3" id="j3Top" src="img/332.jpg">
+                </br>            
+                </table>
+              </center>
+              </td>
+              </tr>
+            </tbody>
+          </table>
+        </center>
+      </div>
+    </div>
+
+    <!--Fourth Section: Closing-->
+    <div id="coloredBodyDiv" class="section4" style="background-color:#227700; padding-top:7vw;padding-bottom:13vw">
+      <div class="contain">
+          <center>
+          <div class="downCircle" style="margin-top: -10vw; margin-bottom: 4vw;">
+            <div class="downArrow">
+            </div>
+          </div>
+        </center>
+        <center>
+          <table  style="height:10vw;" align="center">
+            <tbody>
+              <tr valign="center">
+                <td align="center" colspan="4">
+                  <font style="font-size:3.25vw; color:#ffffff">
+                    &nbsp; &nbsp;Excited to learn?</br>
+                  </font>
+                </td>
+              </tr>
+              <tr><td style="height:0.25vw"></td></tr>
+              <tr>
+                <td align="center" valign="top" colspan="4">
+                <font style="font-size:5vw; color:#ffffff;">
+                  Awesome. So are we.
+                </font>
+                </td>
+              </tr>
+              <tr>
+            <td style="padding-top:4vw; align:center;" valign="top">
+              <!--Main Call to Action Button on the default view page-->
+              <a href="#" style="align:center;" class="back-to-top" font="normal" id="mainButton2">&nbsp;Start learning</a>
+            </td>
+            </tbody>
+          </table>
+        </center>
+      </div>
+    </div>
+
+<!--Footer-->
+<div style="height:60px; background-color:#ffffff">
+  </div>
+<div class="footerWrapper" style="background-color:#ffffff">
+
+    <div id="footer" class="footer">
+
+        <div class="footerHeadersWrapper">
+
+            <div class="footerHeaders">
+                <ul>
+                    <li class="footerHeader active first">Marketing solutions</li>
+                    <li class="footerHeader">About</li>
+                    <li class="footerHeader">Support</li>
+                    <li class="footerHeader">Connect with us</li>
+                    <li class="footerHeader last">Academy</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footerSectionsWrapper">
+
+            <div class="footerSections">
+
+                <div class="footerSection active">
+                    <ul>
+                        <li class="footerLinkWrapper"><a href="https://www.brighttalk.com/marketing-solutions/marketing-platform" class="footerLink">Platform overview</a></li>
+                        <li class="footerLinkWrapper"><a href="https://www.brighttalk.com/marketing-solutions/content-audience-revenue" class="footerLink">Features</a></li>
+                        <li class="footerLinkWrapper"><a href="https://www.brighttalk.com/marketing-solutions/pricing" class="footerLink">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footerSection">
+                    <ul>
+                        <li class="footerLinkWrapper"><a href="https://www.brighttalk.com/pages/about-brighttalk/company" class="footerLink">Company profile</a></li>
+                        <li class="footerLinkWrapper"><a href="http://press.brighttalk.com/" class="footerLink">Press room</a></li>
+                        <li class="footerLinkWrapper"><a href="https://www.brighttalk.com/pages/about-brighttalk/contact-us" class="footerLink">Contact us</a></li>
+                        <li class="footerLinkWrapper"><a href="https://www.brighttalk.com/pages/careers" class="footerLink">Careers</a></li>
+                        <li class="footerLinkWrapper"><a href="https://www.brighttalk.com/pages/board-members" class="footerLink">Board members</a></li>
+                    </ul>
+                </div>
+
+                <div class="footerSection">
+                    <ul>
+                        <li class="footerLinkWrapper"><a href="https://support.brighttalk.com/categories/20032942-viewers" target="_blank" class="footerLink">Viewers</a></li>
+                        <li class="footerLinkWrapper"><a href="https://support.brighttalk.com/categories/20032947-presenters" target="_blank" class="footerLink">Presenters</a></li>
+                        <li class="footerLinkWrapper"><a href="https://support.brighttalk.com/categories/20033251-channel-owners" target="_blank" class="footerLink">Channel owners</a></li>
+                        <li class="footerLinkWrapper"><a href="https://www.brighttalk.com/pages/customer-support/test-your-system" class="footerLink">Test your system</a></li>
+                    </ul>
+                </div>
+
+                <div class="footerSection">
+                    <ul>
+                        <li class="footerLinkWrapper"><a href="http://itunes.apple.com/us/app/my-brighttalk/id526682683?mt=8" target="_blank" class="footerLink">App</a> <img href="https://www.brighttalk.com/themes/bt2010/images/bt-fav-icon-12x12.gif?v=57554770" alt="" /></li>
+                        <li class="footerLinkWrapper"><a href="http://blog.brighttalk.com/" target="_blank" class="footerLink">Blog</a></li>
+                        <li class="footerLinkWrapper"><a href="https://twitter.com/brighttalk" target="_blank" class="footerLink">Twitter</a></li>
+                        <li class="footerLinkWrapper"><a href="https://www.facebook.com/BrightTALK" target="_blank" class="footerLink">Facebook</a></li>
+                        <li class="footerLinkWrapper"><a href="http://www.linkedin.com/company/204345" target="_blank" class="footerLink">LinkedIn</a></li>
+                        <li class="footerLinkWrapper"><a href="https://plus.google.com/109809814529589522045/posts" target="_blank" class="footerLink">Google+</a></li>
+                    </ul>
+                </div>
+
+                <div class="footerSection last">
+                    <ul>
+                        <li class="footerLinkWrapper"><a href="http://academy.brighttalk.com/" target="_blank" class="footerLink">Academy home</a></li>
+                        <li class="footerLinkWrapper"><a href="http://academy.brighttalk.com/best-practices/" target="_blank" class="footerLink">Best practices</a></li>
+                        <li class="footerLinkWrapper"><a href="http://academy.brighttalk.com/beginners-guide/" target="_blank" class="footerLink">Beginners guide</a></li>
+                        <li class="footerLinkWrapper"><a href="http://academy.brighttalk.com/success-stories/" target="_blank" class="footerLink">Success stories</a></li>
+                        <li class="footerLinkWrapper"><a href="http://academy.brighttalk.com/how-to-tutorials/" target="_blank" class="footerLink">How-to tutorials</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="baseLinks">
+            <ul>
+                <li class="baseLinkWrapper"><a class="footerLink" href="https://www.brighttalk.com/pages/user-agreement">User agreement</a></li>
+                <li class="baseLinkWrapper"><a class="footerLink" href="https://www.brighttalk.com/pages/privacy-policy">Privacy policy</a></li>
+                <li class="baseLinkWrapper"><a class="footerLink" href="https://www.brighttalk.com/pages/patents-pending">Patents pending</a></li>
+                <li class="baseLinkWrapper"><a class="footerLink" href="https://www.brighttalk.com/pages/about-brighttalk/contact-us/feedback">Feedback</a></li>
+                <li class="baseLinkWrapper">&copy; 2013 BrightTALK</li>
+            </ul>
+        </div>
+</div>
+</div> 
+</tr>
+</td>
+                    </tbody>
+                  </table>
+                </div>
+                         
+</div>
+</div>
+
+
+<!-- END TEMPLATE HTML -->
+
+
+<!-- Joyride Stops -->
+    <ol class="joyride-list" data-joyride>
+      <li data-id="j1Feed" class="j1" data-options="tipLocation:right">
+        <h3>Your Knowledge Feed is the best place to find content tailored to fit your interest. It is always up-to-date on BrightTALK's latest additions, so be sure to check regularly for the latest insights!</h3>
+      </li>
+      <li data-id="j1Tab" class="j1" data-options="tipLocation:top">
+        <h3>You can watch webinars on demand, or switch tabs to find and register for upcoming content.</h3>
+      </li>
+      <li data-id="j1Hist" class="j1" data-options="tipLocation:left">
+        <h3>Want to watch something again or find a video to share with a friend? The viewing history keeps a running track of all your watched and registered webinars.</h3>
+      </li>
+      <li data-id="j1Chan" class="j1" data-options="tipLocation:bottom">
+        <h3>Channels are sets of webinars curated and produced by our clients. Check out which ones you're subscribed to!</h3>
+      </li>
+      <li data-id="j1Prof" class="j1" data-options="tipLocation:right">
+        <h3>Increase your social presence. Upload a picture and update your profile so you can connect with other professionals on BrightTALK.</h3>
+      </li>
+      <li data-id="j2Go" class="j2" data-options="tipLocation:left">
+        <h3>Scroll over the button to display a list of the BrightTALK communities.</h3>
+      </li>
+      <li data-id="j2Search" class="j2" data-options="tipLocation:bottom">
+        <h3>Or type your interests directly into the Search Bar to find content.</h3>
+      </li>
+      <li data-id="j3Comm" class="j3" data-options="tipLocation:left">
+        <h3>Here on the Community Page, you can watch the latest webinars or register for future content.</h3>
+      </li>
+      <li data-id="j3Drop" class="j3" data-options="tipLocation:left">
+        <h3>Click the drop-down menu to alternate displays from webinars to channels or summits.</h3>
+      </li>
+      <li data-id="j3Top" class="j3" data-options="tipLocation:right">
+        <h3>Not sure what to watch? Watch featured content, attend a summit or subscribe to some of the community's trending channels!</h3>
+      </li>
+      <li data-id="j3Share" class="j3" data-options="tipLocation:right">
+        <h3>Found something interesting? Be sure to share it with your network through LinkedIn, Twitter, Facebook or G+.</h3>
+      </li>
+    </ol>
+
+
+<!-- Joyride Plugin -->
+    <script type="text/javascript" src="jquery-1.10.1.js"></script>
+    <script type="text/javascript" src="jquery.cookie.js"></script>
+    <script type="text/javascript" src="modernizr.mq.js"></script>
+    <script type="text/javascript" src="jquery.joyride-2.1.js"></script>
+
+    <script>
+      $(document).ready(function() {
+   jQuery('#mainButton').click(function(event) {
+      counter=1;
+        $('.joyride-list').joyride({
+          autoStart : true,
+        modal: false,
+        expose: false
+      });
+      });
+      });
+    </script>
+
+
+<!-- SYSTEM FOOTER - DO NOT EDIT -->
+</div>
+</div>
+<?php echo $mContext['endElements']; ?>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-187516-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script type="text/javascript" href="https://www.brighttalk.com/compiled/js/common.js?v=57554770"></script>
+
+</body>
+</html>
